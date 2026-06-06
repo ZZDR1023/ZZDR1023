@@ -109,12 +109,11 @@ Web 与 Serverless     ████████░░  H5 / Canvas / Flask / Clo
 
 ## 📊 GitHub 数据
 
-<div align="center">
+GitHub 统计图片偶尔会因为第三方服务限流或网络问题加载失败。这里保留稳定入口：
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=ZZDR1023&show_icons=true&theme=tokyonight&hide_border=true&border_radius=16" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ZZDR1023&layout=compact&theme=tokyonight&hide_border=true&border_radius=16" />
-
-</div>
+- [查看我的 GitHub 仓库](https://github.com/ZZDR1023?tab=repositories)
+- [查看个人作品集](https://zzdr1023.github.io)
+- [体验光球潜入 Demo](https://cyber-infiltration.pages.dev/)
 
 ---
 
