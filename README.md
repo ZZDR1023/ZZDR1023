@@ -4,13 +4,9 @@
 
 ### AI Native 应用开发 · Serverless Web · ROS 机器人系统
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&pause=900&color=38BDF8&center=true&vCenter=true&width=780&lines=把+AI+能力接入真实业务和硬件场景;构建+Serverless+Web+与+AI+Native+应用;探索+ROS%2FLinux+机器人系统工程实践" alt="Typing SVG" />
+把 AI 能力接入真实业务和硬件场景，构建 Serverless Web 与 AI Native 应用，探索 ROS/Linux 机器人系统工程实践。
 
-<p>
-  <a href="https://zzdr1023.github.io"><img src="https://img.shields.io/badge/Portfolio-zzdr1023.github.io-38BDF8?style=for-the-badge&logo=githubpages&logoColor=white" alt="Portfolio" /></a>
-  <a href="https://cyber-infiltration.pages.dev/"><img src="https://img.shields.io/badge/Live%20Demo-光球潜入-F59E0B?style=for-the-badge&logo=cloudflarepages&logoColor=white" alt="Live Demo" /></a>
-  <img src="https://komarev.com/ghpvc/?username=ZZDR1023&style=for-the-badge&color=38bdf8" alt="profile views" />
-</p>
+[个人作品集](https://zzdr1023.github.io) · [光球潜入在线 Demo](https://cyber-infiltration.pages.dev/) · [GitHub 仓库](https://github.com/ZZDR1023?tab=repositories)
 
 </div>
 
@@ -31,20 +27,13 @@
 
 ## 🧠 技术栈
 
-<div align="center">
-
-![Claude Code](https://img.shields.io/badge/Claude%20Code-AI%20Dev-111827?style=for-the-badge&logo=anthropic&logoColor=white)
-![GLM API](https://img.shields.io/badge/GLM%20API-LLM-111827?style=for-the-badge&logo=openai&logoColor=white)
-![Python](https://img.shields.io/badge/Python-111827?style=for-the-badge&logo=python&logoColor=3776AB)
-![JavaScript](https://img.shields.io/badge/JavaScript-111827?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![HTML5](https://img.shields.io/badge/HTML5-111827?style=for-the-badge&logo=html5&logoColor=E34F26)
-![CSS3](https://img.shields.io/badge/CSS3-111827?style=for-the-badge&logo=css3&logoColor=1572B6)
-![ROS](https://img.shields.io/badge/ROS-111827?style=for-the-badge&logo=ros&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-111827?style=for-the-badge&logo=linux&logoColor=FCC624)
-![Cloudflare](https://img.shields.io/badge/Cloudflare-111827?style=for-the-badge&logo=cloudflare&logoColor=F38020)
-![Git](https://img.shields.io/badge/Git-111827?style=for-the-badge&logo=git&logoColor=F05032)
-
-</div>
+| 方向 | 技术 |
+|---|---|
+| AI Native | Claude Code、Codex、GLM API、Prompt 工作流、AI 文案生成 |
+| Web 前端 | HTML5、CSS3、JavaScript、Canvas |
+| Serverless | Cloudflare Pages、Workers、D1 |
+| 机器人系统 | ROS1、Cartographer、RViz、Linux、SSH 调试 |
+| 工程协作 | Git、CI/CD、systemd、日志分析、部署排障 |
 
 ---
 
@@ -109,7 +98,7 @@ Web 与 Serverless     ████████░░  H5 / Canvas / Flask / Clo
 
 ## 📊 GitHub 数据
 
-GitHub 统计图片偶尔会因为第三方服务限流或网络问题加载失败。这里保留稳定入口：
+为避免第三方图片服务限流导致 README 出现坏图标，这里不再使用外部统计图片，保留稳定入口：
 
 - [查看我的 GitHub 仓库](https://github.com/ZZDR1023?tab=repositories)
 - [查看个人作品集](https://zzdr1023.github.io)
