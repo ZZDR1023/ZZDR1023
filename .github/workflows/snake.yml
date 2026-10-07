@@ -1,0 +1,51 @@
+name: generate snake
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'profile.toml'
+      - 'scripts/snake-outputs.py'
+      - '.github/workflows/snake.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Login and colours come from profile.toml; the script prints the two
+      # output lines (light and dark) with the palette URL-encoded.
+      - name: read profile.toml
+        id: cfg
+        run: |
+          set -euo pipefail
+          echo "login=$(python3 -c 'import tomllib;print(tomllib.load(open("profile.toml","rb"))["github"]["login"])')" >> "$GITHUB_OUTPUT"
+          {
+            echo 'outputs<<EOF'
+            python3 scripts/snake-outputs.py
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Generate snake animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ steps.cfg.outputs.login }}
+          outputs: ${{ steps.cfg.outputs.outputs }}
+
+      - name: Push snake to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

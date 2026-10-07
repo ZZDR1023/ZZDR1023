@@ -1,0 +1,60 @@
+# Pixel profile — configuration for ZZDR1023
+# Setup guide: SETUP.md
+
+[github]
+login = "ZZDR1023"
+
+[hero]
+title = "ZZDR1023"
+portrait = "github"
+portrait_crop = [230, 230, 229]
+facts = ["AI Native", "Serverless", "ROS Robotics"]
+
+[dialog]
+speaker = "ZHANG HAN"
+lines = [
+  "AI Native 应用开发 · Serverless · ROS 机器人",
+  "把 AI 能力落到真实业务，把 Demo 打磨成工程产品。",
+  "Welcome to my pixel space!"
+]
+speed = 26
+hold = 12.0
+
+[signature]
+sign_off = "ZZDR1023 // 2026"
+farewell = "Keep building, stay curious."
+
+[[signature.contacts]]
+icon = "home"
+label = "zzdr1023.github.io"
+
+[[signature.contacts]]
+icon = "mail"
+label = "2774877132@qq.com"
+
+[[signature.contacts]]
+icon = "github"
+label = "@ZZDR1023"
+
+[[signature.contacts]]
+icon = "blog"
+label = "Portfolio"
+
+[palette]
+milk = "#fff7ef"
+cream = "#f7e8d8"
+ink = "#4a3427"
+cocoa = "#8a6a55"
+amber = "#dba85f"
+rose = "#dd8f8c"
+sky = ["#cfc8de", "#e4d0d6", "#f2bfb8", "#f6d7c3", "#f7e8d8"]
+honey = "#f0cf8f"
+latte = "#d9c2ad"
+taupe = "#b39a89"
+caramel = "#c4864a"
+calendar_empty = "#f1e4d8"
+
+[cards]
+order = ["hero", "pinned", "activity", "snake", "signature"]
+pinned_fallback = 6
+stack_languages = 6

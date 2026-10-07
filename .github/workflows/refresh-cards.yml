@@ -1,0 +1,57 @@
+name: refresh profile cards
+
+on:
+  schedule:
+    - cron: '17 19 * * *'   # 03:17 Asia/Shanghai; change to taste
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'profile.toml'
+      - 'README.template.md'
+      - 'scripts/**'
+      - '.github/workflows/refresh-cards.yml'
+
+# One refresh at a time: a manual dispatch landing next to the on-push run
+# otherwise races it to `git push` and one of the two is rejected.
+concurrency:
+  group: refresh-cards
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # No pip install: the generator and the drawing toolkit are pure stdlib.
+      # The pixel font, the portrait sprite and the logotype are committed
+      # modules, so nothing is fetched or rasterised at build time.
+      #
+      # GITHUB_TOKEN sees public data only. To count private contributions
+      # too, add a fine-grained PAT as the PROFILE_TOKEN secret (read access
+      # to your repositories and profile); the step prefers it when present.
+      - name: regenerate profile cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN || secrets.GITHUB_TOKEN }}
+        run: python3 scripts/gen-profile.py
+
+      - name: commit if changed
+        run: |
+          set -euo pipefail
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A assets README.md
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "chore: refresh profile cards"
+            git pull --rebase origin main
+            git push
+          fi
